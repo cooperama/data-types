@@ -22,19 +22,19 @@ console.log('--------------------------------------');
 
 // Suppose you are tasked with creating some software, and it is up to **you** to determine which datatypes and what data structure to use.  For each of the following, write which **data types** you would use to represent the data, and then give a small example of the **data structure**:
 
-console.log(`
-  * A light switch that can be either on or off.
-  -- boolean
+
+  // * A light switch that can be either on or off.
+  // -- boolean
 
   const lightsOn = false;
 
-  * A user's email address.
-  -- string
+  // * A user's email address.
+  // -- string
 
   const userEmail = 'useremail@place.com';
 
-  * A spaceship with a hull, laser blasters, tractor beam, and warp drive.
-  -- object
+  // * A spaceship with a hull, laser blasters, tractor beam, and warp drive.
+  // -- object
 
   const spaceship = {
     hull: 'large',
@@ -43,8 +43,8 @@ console.log(`
     warpDrive: true
   };
 
-  * A list of student names from our class.
-  -- array
+  // * A list of student names from our class.
+  // -- array
 
   const students = [
     'Jia',
@@ -54,25 +54,25 @@ console.log(`
     'Laura'
   ];
 
-  * A list of student names from our class, each with a location.
-  -- array of objects
+  // * A list of student names from our class, each with a location.
+  // -- array of objects
 
-  const students = [
+  const studentsLocations = [
     {name: 'Jia', location: 'Seattle'},
     {name: 'Britt', location: 'Seattle'},
     {name: 'Ben', location: 'Seattle'}
   ];
 
-  * A list of student names from our class, each with a location and each with a list of favorite tv shows.
-  -- array of objects with strings and an array
+  // * A list of student names from our class, each with a location and each with a list of favorite tv shows.
+  // -- array of objects with strings and an array
 
-  const students = [
+  const studentsLocationsFaves = [
     {name: 'Jia', location: 'Seattle', favShows: ['Black Mirror', 'Breaking Bad', 'Futurama']},
     {name: 'Josh', location: 'Seattle', favShows: ['Black Mirror', 'Breaking Bad', 'Futurama']},
     {name: 'Nitish', location: 'Seattle', favShows: ['Black Mirror', 'Breaking Bad', 'Futurama']}
   ];
 
-`);
+
 
 // ---
 
@@ -85,9 +85,23 @@ console.log('--------------------------------------');
 // ### 2. Take it Easy
 
 // 1. Make an array that holds all of the colors of the rainbow.
+const rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+
 // 2. Write code that will access "blue" from the rainbow array.
+const blue = rainbowColors[4];
+console.log(blue)
+
 // 3. Make an object that is called your name and holds the information about your favorite food, a hobby, the name of the town that you live in currently, and your favorite datatype.
+const jia = {
+  favFood: 'taco salad',
+  hobby: 'cooking',
+  town: 'Seattle',
+  favDataType: 'objects'
+}
+
 // 4. Write code that will access your hobby from the object that you just created.
+const hobby = jia.hobby;
+console.log(hobby);
 
 // ---
 
