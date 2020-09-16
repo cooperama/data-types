@@ -257,6 +257,14 @@ console.log('--------------------------------------');
 console.log('6. Create a new array `oddBonds`, of only the Bond films released on odd-numbered years.');
 console.log('--------------------------------------');
 // 6. Create a new array `oddBonds`, of only the Bond films released on odd-numbered years.
+const oddBonds = [];
+for (let i = 0; i < bondFilms.length; i++) {
+  if (bondFilms[i].year % 2 === 1)
+  oddBonds.push(bondFilms[i]);
+}
+console.log(oddBonds);
+
+
 
 //   &#x1F534; **Commit:** "oddBonds"
 
