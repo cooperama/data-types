@@ -312,6 +312,46 @@ console.log('--------------------------------------');
 // }
 // ```
 
+// count number of films each actor starred in and save into objeect
+const actorsObj = {};
+for (let i = 0; i < bondFilms.length; i++) {
+  // if (!actorsObj[bondFilms[i].actor]) {
+  //   actorsObj[bondFilms[i].actor] = 1;
+  // } else {
+  //   actorsObj[bondFilms[i].actor] += 1;
+  // }
+  actorsObj[bondFilms[i].actor] 
+    ? actorsObj[bondFilms[i].actor] += 1 
+    : actorsObj[bondFilms[i].actor] = 1;
+}
+
+
+// find the actor that appeared in fewest films
+let appearances = Object.values(actorsObj);   // array of values (each actor's appearances)
+let star = Object.keys(actorsObj);            // array of actors
+
+let leastFilms = Math.max(...appearances);    // max num of appearances by an actor
+let leastFilmsActor;                          // the corresponding actor to the fewest appearances
+
+for (let i = 0; i < star.length; i++) {       // loop to adjust above vars
+  if (actorsObj[star[i]] < leastFilms) {
+    leastFilms = actorsObj[star[i]];
+    leastFilmsActor = star[i];
+  }
+}
+
+// find the object belonging to the actor who starred in the fewest films
+for (let i = 0; i < bondFilms.length; i++) {
+  if (bondFilms[i].actor === leastFilmsActor) {
+    console.log(bondFilms[i])
+  }
+}
+
+
+
+
+
+
 // > _hint:_ Objects by definition have **unique** keys. Later in the problem you could create a new object wherein all the Bond actors are keys, and unique, with no doubles. _hint within a hint:_ If you need to iterate over an object, remember you can use [`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) or a [`for ... in` loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
 
 // &#x1F534; **Commit** "humdinger"
